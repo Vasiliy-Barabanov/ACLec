@@ -1,0 +1,46 @@
+@startuml
+
+class user
+{
+    name: string
+    score: double
+    level: int
+}
+
+class bird
+{
+    name: string
+    number: int 
+}
+
+class slingshot
+{
+    degree: double
+    power: double
+ 
+}
+
+class levelbilding
+{
+    posX: double
+    posY: double
+    pig: int
+    health: int
+    sizeX: int
+    sizeY: int
+    material: int
+}
+
+class destructionsystem
+{
+    newX: double
+    newY: double
+    newhealth: int
+}
+
+user --> slingshot
+bird --> slingshot
+slingshot --> destructionsystem
+user -> levelbilding
+destructionsystem --> user
+@enduml
